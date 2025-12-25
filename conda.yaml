@@ -2,12 +2,12 @@ channels:
   - conda-forge
 
 dependencies:
-  - python=3.12.11
+  - python=3.10.12
+  - pip
   - uv=0.8.13
   - pip:
-    - rpaframework==31.0.0
-    - robocorp==3.0.0
-    - robocorp-browser==2.3.5
-    # Añade la siguiente línea para usar pynput
-    - pynput-robocorp-fork
-    - rpaframework-recognition
+      - rpaframework==31.0.0
+      - robocorp==3.0.0
+      - robocorp-browser==2.3.5
+      - pynput-robocorp-fork
+      - rpaframework-recognition

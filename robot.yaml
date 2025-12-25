@@ -4,10 +4,26 @@
 tasks:
   Minimal Task:
     shell: python -m robocorp.tasks run tasks.py --task minimal_task
+
   Move and Click:
     shell: python -m robocorp.tasks run tasks.py --task move_and_click
+
   Move to Image and Click:
     shell: python -m robocorp.tasks run tasks.py --task click_img
+    # rcc run -t "Move to Image and Click"
+
+  Screenshot Reference:
+    shell: python -m robocorp.tasks run tasks.py --task take_reference_screenshot
+    # rcc run -t "Screenshot Reference"
+
+  Record Movements:
+    shell: python -m robocorp.tasks run tasks.py --task record_movements
+    # rcc run -t "Record Movements"
+
+  Replay Movements:
+    shell: python -m robocorp.tasks run tasks.py --task replay_movements
+    # rcc run -t "Replay Movements"
+
 
 environmentConfigs:
   - environment_windows_amd64_freeze.yaml
@@ -19,7 +35,9 @@ artifactsDir: output
 
 PATH:
   - .
+
 PYTHONPATH:
   - .
+
 ignoreFiles:
   - .gitignore
